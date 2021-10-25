@@ -1,0 +1,126 @@
+@import "./color.scss";
+
+.Login{
+    height: 100%;
+
+    main{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        height: 100%;
+        align-items: center;
+        
+
+        &>form{
+            transition: .5s;
+            transition-timing-function: ease-in-out;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary;
+            border-radius: 10px;
+            padding: 32px;
+            width: 20%;
+            min-width: 350px;
+
+            &:nth-child(2){
+                opacity: 0;
+
+                &>h3{
+                    margin-bottom: 32px;
+                }
+            }
+
+            &>h3{
+                font-size: 32px;
+                color: $font;
+                text-align: center;
+                margin: 0;
+            }
+
+            &>.google-connect{
+                background-color: transparent;
+                border: 1px solid $tertiary;
+                border-radius: 50px;
+                font-size: 16px;
+                color: $font;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 32px 0;
+
+                img{
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 24px;
+                }
+            }
+
+            &>label{
+                font-size: 14px;
+                color: $font-variation;
+                margin-bottom: 8px;
+            }
+
+            &>input{
+                height: 48px;
+                background-color: $tertiary;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 24px;
+                padding: 0 16px;
+                font-size: 18px;
+                color: $font;
+            }
+
+            &>.primary-action{
+                background-color: $dynamic;
+                height: 48px;
+                text-align: center;
+                color: $font;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                margin-top: 16px;
+            }
+        }
+
+        .switch-side{
+            transform: translate(50%);
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: right;
+            height: 100%;
+            width: 50%;
+            transition: .5s;
+            transition-timing-function: ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &>div{
+                height: fit-content;
+                &>.goToSignIn{
+                    display: none;
+                }
+
+                &>button{
+                    background-color: transparent;
+                    padding: 10px;
+                    border: 1px solid $font;
+                    color: $font;
+                    border-radius: 10px;
+                    width: 400px;
+                    height: 48px;
+                    font-size: 18px;
+                }
+
+                &>img{
+                    margin-bottom: 64px;
+                }
+            }
+        }
+    }
+}
