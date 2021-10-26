@@ -1,3 +1,11 @@
+<script>	
+import Actu from "./Actu.svelte";
+import LeftBar from "./LeftBar.svelte";
+import RightBar from "./RightBar.svelte";
+</script>
+
 <main>
-    <h3>home page</h3>
+    <LeftBar />
+    <Actu />
+    <RightBar />
 </main>
