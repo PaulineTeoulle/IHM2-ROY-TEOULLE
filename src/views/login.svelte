@@ -9,6 +9,7 @@
         console.log(username, password)
         if(users.username === username && users.password === password){
             localStorage.setItem("username", username);
+            navigate("/");
         } else {
             alert("pas bon")
         }

@@ -2,6 +2,7 @@
 
 .Login{
     height: 100%;
+    width: 100%;
 
     main{
         position: relative;
@@ -21,7 +22,7 @@
             border-radius: 10px;
             padding: 32px;
             width: 20%;
-            min-width: 350px;
+            min-width: 300px;
 
             &:nth-child(2){
                 opacity: 0;
@@ -32,7 +33,7 @@
             }
 
             &>h3{
-                font-size: 32px;
+                font-size: 24px;
                 color: $font;
                 text-align: center;
                 margin: 0;
@@ -42,9 +43,9 @@
                 background-color: transparent;
                 border: 1px solid $tertiary;
                 border-radius: 50px;
-                font-size: 16px;
+                font-size: 14px;
                 color: $font;
-                padding: 16px;
+                padding: 12px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -53,7 +54,7 @@
                 img{
                     width: 24px;
                     height: 24px;
-                    margin-right: 24px;
+                    margin-right: 16px;
                 }
             }
 
@@ -64,22 +65,22 @@
             }
 
             &>input{
-                height: 48px;
+                height: 40px;
                 background-color: $tertiary;
                 border: none;
                 border-radius: 5px;
                 margin-bottom: 24px;
                 padding: 0 16px;
-                font-size: 18px;
+                font-size: 16px;
                 color: $font;
             }
 
             &>.primary-action{
                 background-color: $dynamic;
-                height: 48px;
+                height: 40px;
                 text-align: center;
                 color: $font;
-                font-size: 18px;
+                font-size: 16px;
                 border: none;
                 border-radius: 5px;
                 margin-top: 16px;
@@ -112,9 +113,9 @@
                     border: 1px solid $font;
                     color: $font;
                     border-radius: 10px;
-                    width: 400px;
-                    height: 48px;
-                    font-size: 18px;
+                    width: 300px;
+                    height: 40px;
+                    font-size: 16px;
                 }
 
                 &>img{
