@@ -4,31 +4,53 @@
     background-color: $secondary;
     padding: 16px;
     color: $font;
-    width: fit-content;
+    position: relative;
 
     img{
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 200px;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
     }
 
     h3{
-        margin: 16px 0 8px 0;
+        font-size: 18px;
+        margin: 8px 0 4px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        white-space: nowrap;
     }
 
     p{
+        font-size: 14px;
         color: $font-variation;
         margin: 0;
     }
 
     button{
         width: 100%;
-        background-color: $dynamic;
-        color: $font;
         border: none;
         border-radius: 5px;
         padding: 8px;
-        margin-top: 24px;
+        margin-top: 16px;
+    }
+
+    .add-fav{
+        background-color: $dynamic;
+        color: $font;
+    }
+
+    .remove-fav{
+        background-color: transparent;
+        border: 1px solid $font-variation;
+        color: $font-variation;
+    }
+
+    .favoris{
+        position: absolute;
+        top:0;
+        right: 24px;
+        width: 32px;
+        height: auto;
     }
 }

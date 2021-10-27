@@ -9,7 +9,7 @@
 
 	let routes = ["/", "/test"]
 	!routes.includes(location.pathname) && (navigate("/")); // retourne home quand modifie url 
-	!localStorage.getItem("username") && (navigate("/login")); // retourne login quand pas connecté et modifie url
+	!sessionStorage.getItem("username") && (navigate("/login")); // retourne login quand pas connecté et modifie url
 
 	export let url = "";
 </script>
@@ -18,7 +18,7 @@
 	<Router {url}>
 		<nav>
 			<!-- <Link class="link" to="login">Login</Link> -->
-			{#if localStorage.getItem("username")}
+			{#if sessionStorage.getItem("username")}
 				<Link to="/">Home</Link>
 				<Link to="jeux">Jeux</Link>
 			{/if}
@@ -33,6 +33,8 @@
 <style lang="scss">
 	#App{
 		display: flex;
+		max-width: 1440px;
+		margin: auto;
 
 		nav{
 			min-width: 200px;
