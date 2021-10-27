@@ -1,6 +1,6 @@
-<script>import TopBar from "./TopBar.svelte"
+<script>import TopBar from "../components/TopBar.svelte"
 
-import Post from "./Post.svelte"
+import Post from "../components/Post.svelte"
 </script>
 
 
@@ -10,10 +10,10 @@ import Post from "./Post.svelte"
 </div>
 
 <style>
-	#Actu {
+	/* #Actu {
 		width: 50%;
 		float: left;
 		margin-right: 15px;
-	}
+	} */
 	
 </style>

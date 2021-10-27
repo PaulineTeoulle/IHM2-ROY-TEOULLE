@@ -1,35 +1,45 @@
 <script>
 	import { Router, Link, Route} from "svelte-routing";
+	import NavBar from "./components/Navbar.svelte";
+
 	import Home from "./views/home.svelte";
 	import Login from "./views/login.svelte";
-	import Test from "./views/test.svelte";
+	import Jeux from "./views/jeux.svelte";
+	import Profil from "./views/profil.svelte";
+	import Search from "./views/search.svelte";
+
     import { navigate } from "svelte-routing";
 	import 'global.scss';
 
 
 	let routes = ["/", "/test"]
 	!routes.includes(location.pathname) && (navigate("/")); // retourne home quand modifie url 
-	!localStorage.getItem("username") && (navigate("/login")); // retourne login quand pas connecté et modifie url
+	!sessionStorage.getItem("username") && (navigate("/login")); // retourne login quand pas connecté et modifie url
 
 	export let url = "";
 </script>
 
-<Router {url}>
-	<nav>
-		<!-- <Link class="link" to="login">Login</Link> -->
-		{#if localStorage.getItem("username")}
-			<Link to="/">Home</Link>
-			<Link to="test">Test</Link>
-		{/if}
+<div id="App">
+	<Router {url}>
+		<nav>
+			<!-- <Link class="link" to="login">Login</Link> -->
+			{#if sessionStorage.getItem("username")}
+				<NavBar/>
+			{/if}
 
-	</nav>
-	<div>
+		</nav>
+		<Route path="search" component={Search} />
+		<Route path="profil" component={Profil} />
 		<Route path="login" component={Login} />
-		<Route path="test" component={Test} />
+		<Route path="games" component={Jeux} />
 		<Route path="/"><Home /></Route>
-	</div>
-</Router>
+	</Router>
+</div>
 
-<style text="text/scss">
-
+<style lang="scss">
+	#App{
+		display: flex;
+		max-width: 1440px;
+		margin: auto;
+	}
 </style>

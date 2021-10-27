@@ -1,11 +1,14 @@
 <script>	
-import Actu from "./Actu.svelte";
-import LeftBar from "./LeftBar.svelte";
-import RightBar from "./RightBar.svelte";
+import Actu from "../components/Actu.svelte";
+// import LeftBar from "./LeftBar.svelte";
+import RightBar from "../components/RightBar.svelte";
 </script>
 
 <main>
-    <LeftBar />
     <Actu />
-    <RightBar />
+    <RightBar /> 
 </main>
+
+<style lang="scss">
+    @import '../styles/home.scss';
+</style>

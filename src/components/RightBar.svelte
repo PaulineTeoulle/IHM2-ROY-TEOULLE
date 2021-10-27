@@ -8,8 +8,8 @@
 
 
 <style>
-    #RigthBar {
+    /* #RigthBar {
         width: 25%;
         float: left;
-    }
+    } */
 </style>

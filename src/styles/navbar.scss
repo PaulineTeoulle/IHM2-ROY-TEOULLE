@@ -1,0 +1,44 @@
+@import "./color.scss";
+
+nav{
+    margin: 24px auto auto 24px;
+    width: 200px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+
+    #logo{
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    a{
+        background-color: red;
+        color: #b9b9b9ff;
+        margin-left: 50px;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 1.4em;
+        margin-bottom: 24px;
+    }
+
+    &>button {
+        margin-left: 50px;
+        margin-top: 50px;
+        font-size: 1.4em;
+        background-color: #03dac5;
+        color: white;
+        width: auto;
+        border-radius: 10px;
+        padding: 10px 50px 10px 50px;
+    }
+
+    img {
+        width: 25px;
+        margin-right: 30px;
+    }
+
+    #profil {
+        border-radius: 50%;
+    }
+}

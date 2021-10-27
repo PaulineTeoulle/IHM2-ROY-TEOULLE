@@ -8,7 +8,8 @@
     const SignIn = () => {
         console.log(username, password)
         if(users.username === username && users.password === password){
-            localStorage.setItem("username", username);
+            sessionStorage.setItem("username", username);
+            navigate("/");
         } else {
             alert("pas bon")
         }
@@ -30,7 +31,7 @@
     const goToSignUp = () => {
         forms[0].style.opacity = 0;
         forms[1].style.opacity = 1;
-        switchDiv[0].style.transform = "translate(-50%)";
+        switchDiv[0].style.transform = "translate(-54%)";
         switchDiv[0].style.backgroundPositionX = "left";
         buttonGoToSignUp[0].style.display = "none";
         buttonGoToSignIn[0].style.display = "initial";
@@ -45,6 +46,9 @@
         buttonGoToSignIn[0].style.display = "none";
         buttonGoToSignUp[0].style.display = "initial";
     }
+
+    document.querySelector('#App').style.maxWidth = "100%";
+    document.querySelector('nav').style.minWidth = 0;
 </script>
 
 <div class="Login">

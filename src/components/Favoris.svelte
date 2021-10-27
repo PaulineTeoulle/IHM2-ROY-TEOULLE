@@ -26,7 +26,7 @@
 </div>
 
 <style>
-    #favoris {
+    /* #favoris {
         background-color: #444444ff;
         border-radius: 10px;
     }
@@ -50,5 +50,5 @@
 
     #jeux {
         margin-top: 20px;
-    }
+    } */
 </style>
