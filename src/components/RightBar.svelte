@@ -4,12 +4,9 @@
 </script>
 
 
-<div id="RigthBar"><SearchBar/><Favoris/></div>
+<div id="RigthBar"><SearchBar class="SearchBar"/><Favoris/></div>
 
 
-<style>
-    /* #RigthBar {
-        width: 25%;
-        float: left;
-    } */
+<style lang="scss">
+    @import '../styles/rightbar.scss';
 </style>

@@ -1,5 +1,6 @@
 @import "./color.scss";
 
+
 nav{
     margin: 24px auto auto 24px;
     width: 200px;
@@ -12,18 +13,15 @@ nav{
         margin-bottom: 32px;
     }
 
-    a{
-        background-color: red;
-        color: #b9b9b9ff;
-        margin-left: 50px;
-        margin-top: 20px;
-        padding: 20px;
-        font-size: 1.4em;
-        margin-bottom: 24px;
+    :global(a) {
+      color:$font-variation;
+      text-decoration: none;
+      margin-top: 20px;
+      font-size: 1.4em;
+      margin-bottom: 24px;
     }
 
     &>button {
-        margin-left: 50px;
         margin-top: 50px;
         font-size: 1.4em;
         background-color: #03dac5;

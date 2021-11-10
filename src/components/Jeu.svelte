@@ -10,12 +10,12 @@
     {/if}
 
     <h3>{jeu.name}</h3>
-    <p>{jeu.posts} postes</p>
+    <p>{jeu.posts} posts</p>
 
     {#if jeu.fav}
-        <button class="remove-fav">enlever des favoris</button>
+        <button class="remove-fav">Enlever des favoris</button>
     {:else}
-        <button class="add-fav">ajouter en favoris</button>
+        <button class="add-fav">Ajouter en favoris</button>
     {/if}
 
     {#if jeu.fav}

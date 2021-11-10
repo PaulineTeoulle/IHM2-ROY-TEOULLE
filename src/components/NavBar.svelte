@@ -7,7 +7,7 @@
 <nav>
     <img id="logo" src="images/HerobrineLogo.svg" alt="logo Herobrine"/>
 
-    <Link to="/">
+    <Link to="/" class="navBarLink">
         <img src="images/svg/accueil.svg" alt="accueil icon" />
         Accueil
     </Link>
@@ -16,7 +16,7 @@
         Jeux
     </Link>
     <Link to="search">
-        <img src="images/svg/loupe.svg" alt="recherche icon" />
+        <img src="images/svg/group.svg" alt="recherche icon" />
         Recherche
     </Link>
 	<Link to="profil">
@@ -29,4 +29,5 @@
 
 <style lang="scss">
     @import '../styles/navbar.scss';
+
 </style>

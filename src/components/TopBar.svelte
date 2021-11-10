@@ -11,8 +11,8 @@
         display: flex;
         color: white;
         border-radius: 10px;
-        padding:5px;
-        border: solid #444444ff 1px;
+        padding:10px;
+        border: solid #444444ff 3px;
     }
 
     #TopBar > div{

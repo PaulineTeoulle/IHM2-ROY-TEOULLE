@@ -1,0 +1,27 @@
+@import "./color.scss";
+
+#Favoris {
+    background-color: $tertiary;
+    border-radius: 10px;
+    margin-left: 30px;
+
+    #title {
+        color: $font;
+        margin-left: 20px;
+        padding-top: 20px;
+        font-weight: bold;
+    }
+    
+    #liste {
+        color: $font;
+        margin-left: 10px;
+        padding-bottom: 30px;
+    }
+    #nbPost {
+        color: $font-variation;
+    }
+
+    #jeux {
+        margin-top: 20px;
+    }
+}
