@@ -13,7 +13,7 @@
 <style>
     #Post {
         margin-top: 20px;
-        background-color: #1E1E1E;
+        background-color: red;
         color:white;
     }
 

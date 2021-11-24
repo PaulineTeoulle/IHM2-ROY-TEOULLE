@@ -3,7 +3,6 @@
     export let navbar;
 </script>
 
-
 <nav>
     <img id="logo" src="images/HerobrineLogo.svg" alt="logo Herobrine"/>
 
@@ -24,7 +23,7 @@
         Profil
     </Link>
 
-    <button> Poster </button>
+    <button> Posterr </button>
 </nav>
 
 <style lang="scss">

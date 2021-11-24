@@ -14,11 +14,12 @@ nav{
     }
 
     :global(a) {
-      color:$font-variation;
-      text-decoration: none;
-      margin-top: 20px;
-      font-size: 1.4em;
-      margin-bottom: 24px;
+        background-color: red;
+        color:$font-variation;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 1.4em;
+        margin-bottom: 24px;
     }
 
     &>button {
@@ -28,6 +29,7 @@ nav{
         color: white;
         width: auto;
         border-radius: 10px;
+        border: none;
         padding: 10px 50px 10px 50px;
     }
 
