@@ -1,24 +1,17 @@
 <script></script>
 
-<div id="Post">
-    <div id="pseudo">
-        <img id="profil" src="images/svg/google.png" alt="profil logo" />Pryxs
+<div class="Post">
+    <div>
+        <img src="images/kiwi.jpg" alt="profil" />
+        <div>
+            <span>Sxyrp</span>
+            <span>@Dofus</span>
+            <p>Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p</p>
+        </div>
     </div>
-    <div id="content">Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p</div>
-    <div id="img">
-        <img src="images/background.jpg" alt="google logo"/>
-    </div>
+    <img src="images/background.jpg" alt="google logo"/>
 </div>
 
-<style>
-    #Post {
-        margin-top: 20px;
-        background-color: red;
-        color:white;
-    }
-
-    #profil{
-        border-radius: 50%;
-        width: 50px;
-    }
+<style lang="scss">
+    @import '../styles/post.scss';
 </style>

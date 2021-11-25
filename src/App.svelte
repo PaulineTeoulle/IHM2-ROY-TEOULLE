@@ -21,18 +21,18 @@
 
 <div id="App">
 	<Router {url}>
-		<!-- <nav> -->
+		<nav>
 			<!-- <Link class="link" to="login">Login</Link> -->
 			{#if sessionStorage.getItem("username")}
 				<NavBar/>
 			{/if}
 
-		<!-- </nav> -->
-		<!-- <Route path="search" component={Search} />
+		</nav>
+		<Route path="search" component={Search} />
 		<Route path="profil" component={Profil} />
 		<Route path="login" component={Login} />
 		<Route path="games" component={Jeux} />
-		<Route path="/"><Home /></Route> -->
+		<Route path="/"><Home /></Route>
 	</Router>
 </div>
 

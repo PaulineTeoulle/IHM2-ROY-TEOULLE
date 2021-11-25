@@ -10,10 +10,10 @@ import Post from "../components/Post.svelte"
 </div>
 
 <style>
-	/* #Actu {
-		width: 50%;
-		float: left;
-		margin-right: 15px;
-	} */
+	#Actu {
+		width: 65%;
+		/* float: left;
+		margin-right: 15px; */
+	}
 	
 </style>

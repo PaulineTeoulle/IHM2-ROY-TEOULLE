@@ -11,14 +11,13 @@
         background-color: #444444ff;
         border: 0;
         padding: 15px 10px;
+        font-size: 1em;
         color: $font;
-        text-align: center;
         display:inline-block;
     }
 
     ::placeholder {
         color: $font-variation;
-        font-size: large;
     }
 
 }

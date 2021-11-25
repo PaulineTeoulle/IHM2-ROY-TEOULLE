@@ -23,7 +23,7 @@
         Profil
     </Link>
 
-    <button> Posterr </button>
+    <button> Poster </button>
 </nav>
 
 <style lang="scss">
