@@ -11,10 +11,10 @@
         { name: 'New World', posts: '14K', thumbnail: 'NW.jpg',fav: true },
         { name: 'Minecraft', posts: '54K', thumbnail: 'minecraft.jpg',fav: false },
         { name: 'Apex Legends', posts: '22K', thumbnail: 'apex.jpg', fav: true },
-        { name: 'Black Ops - Cold War', posts: '88K', thumbnail: '' ,fav: false},
-        { name: 'Little Nightmares', posts: '5679', thumbnail: '',fav: false },
-        { name: 'Inside', posts: '9879', thumbnail: '',fav: false },
-        { name: 'Anno 1404', posts: '2342', thumbnail: '',fav: false },
+        { name: 'Black Ops - Cold War', posts: '88K', thumbnail: 'coldWar.jpg' ,fav: false},
+        { name: 'Little Nightmares', posts: '5679', thumbnail: 'LN.jpg',fav: false },
+        { name: 'Inside', posts: '9879', thumbnail: 'inside.jpg',fav: false },
+        { name: 'Anno 1404', posts: '2342', thumbnail: 'anno.jpg',fav: false },
 	];
 </script>
 

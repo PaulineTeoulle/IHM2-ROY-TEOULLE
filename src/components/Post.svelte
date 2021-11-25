@@ -1,15 +1,17 @@
-<script></script>
+<script>
+    export let post;
+</script>
 
 <div class="Post">
     <div>
-        <img src="images/kiwi.jpg" alt="profil" />
+        <img src="images/{post.thumbnail}" alt="profil" />
         <div>
-            <span>Sxyrp</span>
-            <span>@Dofus</span>
-            <p>Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p</p>
+            <span>{post.user}</span>
+            <span>@{post.game}</span>
+            <p>{post.message}</p>
         </div>
     </div>
-    <img src="images/background.jpg" alt="google logo"/>
+    <img src="images/ressources/{post.image}" alt="google logo"/>
 </div>
 
 <style lang="scss">
