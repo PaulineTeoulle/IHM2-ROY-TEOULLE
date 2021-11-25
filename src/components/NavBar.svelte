@@ -1,5 +1,7 @@
 <script>
     import { Router, Link, Route} from "svelte-routing";
+    import { toggleModal } from "../views/home.svelte";
+
     export let navbar;
 </script>
 
@@ -23,10 +25,10 @@
         Profil
     </Link>
 
-    <button> Poster </button>
+    <button on:click={toggleModal}> Poster </button>
 </nav>
 
 <style lang="scss">
-    @import '../styles/navbar.scss';
+        @import '../styles/navbar.scss';
 
 </style>
