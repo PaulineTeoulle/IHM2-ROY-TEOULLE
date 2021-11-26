@@ -27,8 +27,9 @@ nav{
         }
     }
 
-    :global(.active){
-        background-color: red;
+    :global([aria-current]){
+        font-weight: bold;
+        color: $font;
     }
 
     &>button {
