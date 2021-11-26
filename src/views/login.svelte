@@ -62,7 +62,7 @@
             <label for="username">Nom d'utilisateur</label>
             <input id="username" placeholder="Ex : Tartempion27" type="text" bind:value={username}/>
             <label for="password">Mot de passe</label>
-            <input id="password" type="text" bind:value={password}/>
+            <input id="password" type="password" bind:value={password}/>
             <button class="primary-action" on:click={SignIn}>Connexion</button>
         </form>
 
