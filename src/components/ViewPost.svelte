@@ -1,6 +1,7 @@
 <script>
     import { createEventDispatcher } from 'svelte';
     import Comment from "../components/Comment.svelte";
+    import { onMount } from 'svelte';
 
     const dispatch = createEventDispatcher();
 
@@ -16,6 +17,17 @@
         {"user" : "François P.", "date" : "13 nov. 2021", "message" : "Il est mignon monsieur Pignon, il est méchant monsieur Brochant !", "likes" : "4"},
         {"user" : "Pierre", "date" : "13 nov. 2021", "message" : "Celui qui dit qu'il l'a fait, je lui offre... un sandwich. - À quoi le sandwich ? - À la fraise.", "likes" : "4"}
     ]
+
+    onMount(async () => {
+        let maxHeight = 0;
+        let listElement = document.getElementsByClassName("hgt");
+        console.log(listElement);
+        [...listElement].forEach(function(element) {
+            maxHeight += element.clientHeight
+        });
+
+        document.getElementsByClassName("scrollable")[0].style.height = window.innerHeight - maxHeight + "px";
+	});    
 </script>
 
 <div class="View-post">
@@ -26,7 +38,7 @@
 
     <div>
         <aside>
-            <div>
+            <div class="hgt">
                 <img src="images/{post.thumbnail}" alt="profil" />
                 <div>
                     <span>{post.user}</span>
@@ -35,18 +47,18 @@
                 </div>
             </div>
 
-            <div>
+            <div class="hgt">
                 <p><span>{post.likes}</span> J'aimes</p>
                 <p><span>{post.comments}</span> Commentaires</p>
             </div>
 
-            <div>
+            <div class="scrollable">
                 {#each comments as comment}
                     <Comment comment={comment}/>
                 {/each} 
             </div>
 
-            <div>
+            <div class="hgt">
                 <input type="text" placeholder="commentez..." />
                 <button><img src="images/svg/send.svg" alt="icon envoyer"></button>
             </div>
@@ -152,7 +164,6 @@
 
                 &>div:nth-child(3){
                     padding: 16px;
-                    height: 60%;
                     overflow-y: scroll;
 
                     &::-webkit-scrollbar{
