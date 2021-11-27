@@ -1,7 +1,15 @@
 <script>
     import { toggleModal } from "../views/home.svelte";
+    import { createEventDispatcher } from 'svelte';
+
+    let text = ""
+
+    const dispatch = createEventDispatcher();
 
     function post(){
+        dispatch('message', {
+            text: text
+        });
         toggleModal();
     }
 
@@ -13,7 +21,7 @@
         <span>Pryxs</span>
     </div>
 
-    <textarea maxlength="255"></textarea>
+    <textarea maxlength="255" bind:value={text}></textarea>
 
     <div>
         <div>
@@ -28,7 +36,7 @@
 
     <div>
         <button on:click={post}>Poster</button>
-        <button on:click={post}>Annuler</button>
+        <button on:click={toggleModal}>Annuler</button>
     </div>
 </div>
 
@@ -46,22 +54,23 @@
         padding: 24px;
         width: 30%;
         min-width: 350px;
+        border-radius: 10px;
 
-        div:first-child{
+        &>div:first-child{
             margin: 0 0 16px 0;
             color: $font;
             display: flex;
             align-items: center;
 
-            img{
+            &>img{
                 border-radius: 50%;
                 object-fit: cover;
-                width: 32px;
-                height: 32px;
+                width: 40px;
+                height: 40px;
                 margin-right: 16px;
             }
 
-            span{
+            &>span{
                 font-weight: bold;
             }
         }
@@ -87,27 +96,29 @@
             justify-content: space-between;
             margin-bottom: 16px;
 
-            div{
-                button{
+            &>div{
+                &>button{
                     background-color: transparent;
                     border: 1px solid $tertiary;
                     border-radius: 5px;
                     color: $font;
                     padding: 10px 20px;
+                    outline: none;
                 }
 
-                span{
+                &>span{
                     margin-left: 16px;
                     color: $font-variation;
                 }
             }
 
-            select{
+            &>select{
                 background-color: $tertiary;
                 border: none;
                 border-radius: 5px;
                 padding: 5px 15px;
                 color: $font-variation;
+                outline: none;
             }
         }
 

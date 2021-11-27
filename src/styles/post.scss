@@ -9,6 +9,7 @@
 
     &>div:first-child{
         display: flex;
+        cursor: pointer;
 
         img{
             width: 32px;
@@ -33,5 +34,31 @@
 
     img{
         width: 100%;
+        cursor: pointer
+    }
+
+    .post-footer{
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        color: $font-variation;
+        font-size: 14px;
+
+        &>div:first-child{
+            display: flex;
+            &>span{
+                display: flex;
+                &>img{
+                    height: 16px;
+                    width: auto;
+                    margin-right: 16px;
+                }
+            }
+
+            &>span:nth-child(2){
+                margin-left: 32px;
+            }
+
+        }
     }
 }

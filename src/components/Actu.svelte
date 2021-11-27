@@ -2,12 +2,8 @@
 	import TopBar from "../components/TopBar.svelte"
 	import Post from "../components/Post.svelte"
 
-	let posts = [
-		{"user" : "Sxyrp", "thumbnail": "kiwi.jpg", "game" : "Dofus", "message" : "Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p", "image" : "tutu.png"},
-		{"user" : "Bamboo", "thumbnail": "scratch.jpg", "game" : "Dofus", "message" : "Caverne des Bworks", "image" : "caverne.png"}
-	]
+	export let posts;
 </script>
-
 
 <div id="Actu">
 	<TopBar/>
@@ -30,7 +26,7 @@
 		}
 
 		.background{
-			filter: contrast(.7);
+			filter: contrast(.4);
 			display: none;
 			top: 0;
 			left: 0;
