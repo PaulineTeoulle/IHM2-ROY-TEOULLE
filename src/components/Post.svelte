@@ -1,5 +1,6 @@
 <script>
     import ViewPost from "../components/ViewPost.svelte";
+    import { createEventDispatcher } from 'svelte';
 
     export let post;
 
@@ -16,6 +17,21 @@
         bg.style.display = "none";
         show = false;
     }
+
+
+    function likePost(){
+        let likeSvg =  document.getElementsByClassName("like")[0];
+        if(likeSvg.classList.contains("filled")){
+            likeSvg.setAttribute("src", "images/svg/heart.svg")
+            likeSvg.classList.remove("filled")
+            post.likes -= 1;
+        } else {
+            likeSvg.setAttribute("src", "images/svg/filled-heart.svg")
+            likeSvg.classList.add("filled")
+            post.likes += 1;
+        }
+    }
+
 </script>
 
 {#if show}
@@ -34,8 +50,8 @@
     <img on:click={showPost} src="images/ressources/{post.image}" alt="google logo"/>
     <div class="post-footer">
         <div>
-            <span><img src="images/svg/heart.svg" alt="like icon" /> {post.likes}</span>
-            <span><img src="images/svg/comment.svg" alt="comment icon" /> {post.comments}</span>
+            <span><img on:click={likePost} src="images/svg/heart.svg" alt="like icon" class="like"/> {post.likes}</span>
+            <span><img on:click={showPost} src="images/svg/comment.svg" alt="comment icon" /> {post.comments}</span>
         </div>
         <span>{post.date}</span>
     </div>

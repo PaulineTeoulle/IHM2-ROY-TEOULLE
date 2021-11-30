@@ -27,6 +27,14 @@ nav{
         }
     }
 
+    .profil-image{
+        border-radius: 50%;
+        object-fit: cover;
+        width: 24px;
+        // height: 32px;
+        // margin-right: 16px;
+    }
+
     :global([aria-current]){
         font-weight: bold;
         color: $font;

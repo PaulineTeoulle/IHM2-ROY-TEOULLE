@@ -9,6 +9,13 @@
         dispatch('quit');
     }
 
+    let text = ''
+
+    function addComment(){
+		comments = [...comments, {"user" : "Pryxs","date" : "09 dec. 2021", "message" : `${text}`, "likes" : 0}]
+        text = ''
+    }
+
     export let post;
 
     let comments = [
@@ -26,7 +33,7 @@
             maxHeight += element.clientHeight
         });
 
-        document.getElementsByClassName("scrollable")[0].style.height = window.innerHeight - maxHeight + "px";
+        document.getElementsByClassName("scrollable")[0].style.height = window.innerHeight - maxHeight - 30 + "px";
 	});    
 </script>
 
@@ -59,8 +66,8 @@
             </div>
 
             <div class="hgt">
-                <input type="text" placeholder="commentez..." />
-                <button><img src="images/svg/send.svg" alt="icon envoyer"></button>
+                <input type="text" bind:value={text} placeholder="commentez..." />
+                <button on:click={addComment}><img src="images/svg/send.svg" alt="icon envoyer"></button>
             </div>
         </aside>
     </div>

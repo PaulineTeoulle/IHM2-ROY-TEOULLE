@@ -14,12 +14,12 @@
         <img src="images/svg/game-controller.svg" alt="jeux icon" />
         Jeux
     </Link>
-    <Link to="search" class="navBarLink search">
+    <Link to="chat" class="navBarLink chat">
         <img src="images/svg/group.svg" alt="recherche icon" />
-        Recherche
+        Discussion
     </Link>
 	<Link to="profil" class="navBarLink profil">
-        <img id="profil" src="images/svg/loupe.svg" alt="profil icon" />
+        <img class="profil-image" src="images/kiwi.jpg" alt="profil" />
         Profil
     </Link>
 

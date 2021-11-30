@@ -6,7 +6,7 @@
 	import Login from "./views/login.svelte";
 	import Jeux from "./views/jeux.svelte";
 	import Profil from "./views/profil.svelte";
-	import Search from "./views/search.svelte";
+	import Chat from "./views/chat.svelte";
 
     import { navigate } from "svelte-routing";
 	import 'global.scss';
@@ -28,7 +28,7 @@
 			{/if}
 
 		</nav>
-		<Route path="search" component={Search} />
+		<Route path="chat" component={Chat} />
 		<Route path="profil" component={Profil} />
 		<Route path="login" component={Login} />
 		<Route path="games" component={Jeux} />
