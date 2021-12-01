@@ -10,7 +10,10 @@
     let message = ""
 
     function sendMessage(){
-
+        if(message){
+            messages = [...messages, {"user" : 1 ,"message" : message}]
+            message = ''
+        }
     }
 
     onMount(async () => {
@@ -61,7 +64,54 @@
     </div>
 
     <div>
-
+        <h3>Démarrer une conversation</h3>
+        <ul>
+            <li>
+                <div>
+                    <img class="profil-image" src="images/kiwi.jpg" alt="profil" />
+                    <span></span> 
+                </div> 
+                <div>
+                    <p>Ravio'league</p>          
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img class="profil-image" src="images/scratch.jpg" alt="profil" />
+                    <span></span> 
+                </div> 
+                <div>
+                    <p>Scratch</p>          
+                </div>
+            </li>
+            <li>
+                <div class="default">
+                    <img src="images/svg/user.svg" alt="icon user">
+                </div> 
+                <div>
+                    <p>Franois P.</p>
+                    <span>hors ligne</span>          
+                </div>
+            </li>
+            <li>
+                <div class="default">
+                    <img src="images/svg/user.svg" alt="icon user">
+                </div> 
+                <div>
+                    <p>Pierre</p>
+                    <span>hors ligne</span>          
+                </div>
+            </li>
+            <li>
+                <div class="default">
+                    <img src="images/svg/user.svg" alt="icon user">
+                </div> 
+                <div>
+                    <p>Ed. Munch</p>
+                    <span>hors ligne</span>          
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 
@@ -75,7 +125,7 @@
         margin: 24px 24px 24px 0;
 
         &>div:first-child{
-            width: 65%;
+            width: 70%;
             background: $secondary;
             margin-right: 24px;
 
@@ -210,9 +260,83 @@
         }
 
         &>div:nth-child(2){
-            width: 35%;
+            width: 30%;
             min-width: 250px;
-            background: green;
+            background-color: $secondary;
+            color: $font;
+            
+            &>h3{
+                margin: 16px;
+                font-weight: bold;
+                margin-bottom: 24px;
+            }
+
+            &>ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                &>li{
+                    margin: 16px;
+                    display: flex;
+                    align-items: start;
+
+                    &>div:first-child{
+                        margin-right: 16px;
+                        position: relative;
+
+                        &>img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+
+                        &>span{
+                            position: absolute;
+                            top: 28px;
+                            left: 28px;
+                            height: 8px;
+                            width: 8px;
+                            background: green;
+                            border-radius: 50%;
+                            border: 2px solid $secondary;
+                        }
+                    }
+
+                    &>div:nth-child(2){
+                        width: fit-content;
+                        
+                        &>p{
+                            font-size: 16px;
+                            margin: 0;
+                            font-weight: bold;
+                        }
+
+                        &>span{
+                            color: $font-variation;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &>.default{
+                        align-self: center;
+                        background-color: $tertiary;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &>img{
+                            border-radius: 0% !important;
+                            height: 60% !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+            }
         }
     }
 </style>
