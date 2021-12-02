@@ -13,7 +13,7 @@
         <Banner/>
         {#each posts as post}
          <Post post={post}/>
-         {/each}
+        {/each}
     </div>
   <div><Platform/></div>
   
