@@ -1,7 +1,9 @@
 @import "./color.scss";
 
+
+
 .Profil{
-    width : 100%;
+    width : 65%;
     margin-top: 35px;
     display: flex;
 
@@ -13,10 +15,9 @@
 		&::-webkit-scrollbar {
 			display: none;
 		}
-
     }
     &>div:nth-child(2){
-        width: 30%;
+        width: 50%;
     }
 
 }

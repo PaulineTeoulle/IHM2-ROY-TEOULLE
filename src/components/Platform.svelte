@@ -23,6 +23,8 @@
 	@import '../styles/color.scss';
 
     .Platform{
+
+        
         background-color: $tertiary;
         width: 100%;
         margin: 0 24px;
@@ -34,5 +36,9 @@
             height: auto;
         }
     }
+
+
+
+
 	
 </style>

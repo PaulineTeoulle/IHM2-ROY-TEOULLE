@@ -3,8 +3,8 @@
 	import Post from "../components/Post.svelte";
     import Platform from "../components/Platform.svelte";
     let posts = [
-		{"user" : "Sxyrp", "thumbnail": "kiwi.jpg", "game" : "Dofus", "message" : "Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p", "image" : "tutu.png"},
-		{"user" : "Bamboo", "thumbnail": "scratch.jpg", "game" : "Dofus", "message" : "Caverne des Bworks", "image" : "caverne.png"}
+        {"user" : "Sxyrp", "thumbnail": "kiwi.jpg", "game" : "Dofus", "message" : "Quête tutu presque terminée !!! Demain gros rush temporis (bougle dj gelé pour drop le gelano) :p", "image" : "tutu.png", "comments" : "13", "likes" : 70, "date" : "13 nov. 2021"},
+		{"user" : "Sxyrp", "thumbnail": "kiwi.jpg", "game" : "Dofus", "message" : "Super le donjon avec les potes", "image" : "caverne.png" ,"comments" : "8", "likes" : 53, "date" : "12 nov. 2021"}
 	]
 </script>
 
@@ -16,7 +16,6 @@
         {/each}
     </div>
   <div><Platform/></div>
-  
 </div>
 
 <style lang="scss">
