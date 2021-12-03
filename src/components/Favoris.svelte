@@ -3,29 +3,29 @@
 </script>
 
 <div id="Favoris">
-    <h3 id="title">Favoris</h3>
-    <div id="liste">
-        <div id="jeux">
+    <h3 class="title">Favoris</h3>
+    <div class="liste">
+        <div class="jeux">
             <img src="images/thumbnails/dofus.jpg" alt="vignette par défaut"/>
-            <div id="nom">Dofus</div>
-            <div id="nbPost">8 678 posts</div>
+            <div class="nom">Dofus</div>
+            <div class="nbPost">8 678 posts</div>
         </div>
 
-        <div id="jeux" />
+        <div class="jeux">
         <img src="images/thumbnails/lol.jpg" alt="vignette par défaut"/>
-            <div id="nom">League of Legend</div>
-            <div id="nbPost">79K posts</div>
-
-        <div id="jeux">
+            <div class="nom">League of Legend</div>
+            <div class="nbPost">79K posts</div>
+        </div>
+        <div class="jeux">
             <img src="images/thumbnails/minecraft.jpg" alt="vignette par défaut"/>
-            <div id="nom">Minecraft</div>
-            <div id="nbPost">53K posts</div>
+            <div class="nom">Minecraft</div>
+            <div class="nbPost">53K posts</div>
         </div>
 
-        <div id="jeux">
+        <div class="jeux">
             <img src="images/thumbnails/NW.jpg" alt="vignette par défaut"/>
-            <div id="nom">New World</div>
-            <div id="nbPost">17K posts</div>
+            <div class="nom">New World</div>
+            <div class="nbPost">17K posts</div>
         </div>
     </div>
 </div>

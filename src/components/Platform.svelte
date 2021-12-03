@@ -8,47 +8,60 @@
 
 </script>
 
-
-<div class="Platform">
- <h3 id="title">Autres plateformes</h3>
-    <div id="liste">
-    {#each platformInfos as platform}
-
-        <div><img src="images/{platform.thumbnail}" alt="profil"/>{platform.platforme} : {platform.pseudo}</div>
-
-    {/each}
+<div id="Platform">
+    <h3 class="title">Autres plateformes</h3>
+    <div class="list">
+        {#each platformInfos as platform}
+            <div class="platform">
+                <img src="images/{platform.thumbnail}" alt="profil"/>
+                <div class="name">{platform.platforme} : </div>
+                <div class="pseudo">{platform.pseudo}</div>
+            </div>
+        {/each}
     </div>
-
 </div>
+
 <style lang="scss">
   @import '../styles/color.scss';
 
-  .Platform {
-
-
+  #Platform {
     background-color: $tertiary;
-    width: 100%;
-    color: $dynamic;
     border-radius: 10px;
-    margin: 0 20px 0 30px;
+    margin: 0 0 0 30px;
 
     img {
       width: 25px;
       height: auto;
+      margin-right: 16px;
     }
 
-   #title {
-    color: $font;
-    margin-left: 20px;
-    padding-top: 20px;
-    font-weight: bold;
-   }
+    .title {
+      color: $font;
+      padding-top: 20px;
+      font-weight: bold;
+      margin: 0 0 0 24px;
+    }
 
-   #liste {
-    color: $font;
-    margin-left: 10px;
-    padding-bottom: 30px;
-   }
+    .list {
+      color: $font;
+      margin-left: 10px;
+      padding-bottom: 30px;
+    }
+
+    .platform {
+      display: flex;
+      flex-direction: row;
+        margin-top: 16px;
+        margin-left: 16px;
+      .name {
+        color: $font-variation;
+        margin-right: 8px;
+      }
+
+      .pseudo {
+        color: $font;
+      }
+    }
   }
 
 
