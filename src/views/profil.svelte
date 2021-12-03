@@ -26,17 +26,18 @@
         }
     ]
 </script>
-<main>
-    <div id="Profil">
-        <div class="MidContainer">
-            <Banner/>
-            {#each posts as post}
-                <Post post={post}/>
-            {/each}
-        </div>
-        <div id="RigthBar"><Platform/></div >
+
+<div id="Profil">
+    <div class="MidContainer">
+        <Banner/>
+        {#each posts as post}
+            <Post post={post}/>
+        {/each}
     </div>
-</main>
+    <div id="RigthBar">
+        <Platform/>
+    </div>
+</div>
 
 <style lang="scss">
   @import '../styles/profil.scss';
