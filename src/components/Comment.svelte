@@ -1,5 +1,20 @@
 <script>
     export let comment;
+
+    
+    function likeComment(){
+        let likeSvg =  document.getElementsByClassName("like")[0];
+        if(likeSvg.classList.contains("filled")){
+            likeSvg.setAttribute("src", "images/svg/heart.svg")
+            likeSvg.classList.remove("filled")
+            comment.likes -= 1;
+        } else {
+            likeSvg.setAttribute("src", "images/svg/filled-heart.svg")
+            likeSvg.classList.add("filled")
+            comment.likes += 1;
+        }
+    }
+
 </script>
 
 <div class="Comment">
@@ -9,7 +24,7 @@
     <div>
         <p>{comment.user} <span>{comment.date}</span></p>
         <p>{comment.message}</p>
-        <p><img src="images/svg/heart.svg" alt="like icon" /> {comment.likes}</p>
+        <p><img   on:click={likeComment} src="images/svg/heart.svg" alt="like icon"  class="like"/> {comment.likes}</p>
     </div>
 </div>
 
