@@ -1,5 +1,6 @@
 <script>
 
+import { toggleModalProfil } from "../views/profil.svelte";
 
 </script>
 
@@ -21,7 +22,7 @@
     </div>
     <div class="editProfile">
         <img class="editIcon" src="images/svg/edit.svg" alt="edit icon"/>
-        <button class="editButton">Editer profil</button>
+        <button class="editButton" on:click={toggleModalProfil}>Editer profil</button>
     </div>
 </div>
 
