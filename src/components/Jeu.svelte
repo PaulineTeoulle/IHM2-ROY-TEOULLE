@@ -1,5 +1,14 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
+
     export let jeu;
+
+    const dispatch = createEventDispatcher();
+
+
+    function toggleFav(){
+        dispatch('toggleFav', jeu);
+    }
 </script>
 
 <div class="Jeu">
@@ -13,9 +22,9 @@
     <p>{jeu.posts} posts</p>
 
     {#if jeu.fav}
-        <button class="remove-fav">Enlever des favoris</button>
+        <button class="remove-fav" on:click={toggleFav}>Enlever des favoris</button>
     {:else}
-        <button class="add-fav">Ajouter en favoris</button>
+        <button class="add-fav" on:click={toggleFav}>Ajouter en favoris</button>
     {/if}
 
     {#if jeu.fav}

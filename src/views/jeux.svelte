@@ -16,6 +16,14 @@
         { name: 'Inside', posts: '9879', thumbnail: 'inside.jpg',fav: false },
         { name: 'Anno 1404', posts: '2342', thumbnail: 'anno.jpg',fav: false },
 	];
+
+    function toggleFav(jeu){
+        let newJeu = jeu.detail;
+        newJeu.fav = newJeu.fav ? false : true;
+        jeux[jeux.indexOf(jeu.detail)] = newJeu
+    }
+
+
 </script>
 
 <div class="Jeux">
@@ -27,7 +35,7 @@
     <ul>
         {#each jeux as jeu}
             <li>
-                <Jeu jeu={jeu}/>
+                <Jeu jeu={jeu} on:toggleFav={toggleFav}/>
             </li>
         {/each}
     </ul>
