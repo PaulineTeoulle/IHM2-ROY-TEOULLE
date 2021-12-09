@@ -2,13 +2,14 @@
     import { toggleModalProfil } from "../views/profil.svelte";
     import { createEventDispatcher } from 'svelte';
 
-    let text = ""
-
+    export let pseudo;
+    export let platformInfos 
+  
     const dispatch = createEventDispatcher();
 
-    function post(){
+    function editName(){
         dispatch('message', {
-            text: text
+          tableau :  platformInfos
         });
         toggleModalProfil();
     }
@@ -18,42 +19,42 @@
 <div class="ModalProfil">
     <div>
         <img src="images/kiwi.jpg" alt="profil" />
-        <span>Pryxs</span>
+        <span>{pseudo}</span>
     </div>
 
     <div>
         <div>
-            <div>Pseudo</div>
-            <input type="text" bind:value={text}/>
+            <div class="text">Pseudo</div>
+            <input type="text" bind:value={pseudo}/>
         </div>
 
         <div>
         <div>
             <div>
-                <div>Skype</div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[0]['platforme']}</div>
+                <input type="text" bind:value={platformInfos[0]['pseudo']}/>
             </div>
             <div>
-                <div>Steam</div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[1]['platforme']}</div>
+                <input type="text" bind:value={platformInfos[1]['pseudo']}/>
             </div>
             <div>
-                <div>Ubisoft</div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[2]['platforme']}</div>
+                <input type="text" bind:value={platformInfos[2]['pseudo']}/>
             </div>
         </div>
        
         <div>
             <div> 
-                <div>Discord</div></div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[3]['platforme']}</div></div>
+                <input type="text" bind:value={platformInfos[3]['pseudo']}/>
             <div> 
-                <div>Epic Games</div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[4]['platforme']}</div>
+                <input type="text" bind:value={platformInfos[4]['pseudo']}/>
             </div>
             <div>
-                <div>Twitch</div>
-                <input type="text" bind:value={text}/>
+                <div  class="text">{platformInfos[5]['platforme']}</div>
+                <input type="text" bind:value={platformInfos[5]['pseudo']}/>
             </div>
 
         </div>
@@ -61,7 +62,7 @@
     </div>
     
     <div>
-        <button on:click={post}>Sauvegarder</button>
+        <button on:click={editName}>Sauvegarder</button>
         <button on:click={toggleModalProfil}>Annuler</button>
     </div>
 </div>
@@ -82,6 +83,11 @@
         min-width: 350px;
         border-radius: 10px;
 
+
+        .text{
+
+            color: $font-variation;
+        }
         &>div:first-child{
             margin: 0 0 16px 0;
             color: $font;
@@ -102,7 +108,6 @@
         }
 
         &>div:nth-child(2){
-            background-color: red;
 
          
 
@@ -112,12 +117,10 @@
                 
                 &>div:first-child{
                     width: 50%;
-                    background-color: yellow;
                 }
 
                 &>div:nth-child(2){
                     width: 50%;
-                    background-color: green;
                 }
                
             }

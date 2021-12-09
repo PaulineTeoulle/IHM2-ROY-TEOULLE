@@ -1,22 +1,18 @@
 <script>
-    let platformInfos = [
-        {"platforme": "Skype", "pseudo": "ipryx", "thumbnail": "skype.png"},
-        {"platforme": "Discord", "pseudo": "pryxs#6784", "thumbnail": "discord.png"},
-        {"platforme": "Steam", "pseudo": "zPryxs", "thumbnail": "steam.png"},
-        {"platforme": "Twitch", "pseudo": "Pryxs", "thumbnail": "twitch.png"}
-    ]
-
+  export let platformInfos;
 </script>
 
 <div id="Platform">
     <h3 class="title">Autres plateformes</h3>
     <div class="list">
         {#each platformInfos as platform}
+        {#if platform.pseudo}
             <div class="platform">
                 <img src="images/{platform.thumbnail}" alt="profil"/>
                 <div class="name">{platform.platforme} : </div>
                 <div class="pseudo">{platform.pseudo}</div>
             </div>
+          {/if}
         {/each}
     </div>
 </div>

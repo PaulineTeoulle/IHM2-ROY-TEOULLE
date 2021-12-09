@@ -28,6 +28,20 @@
         }
     ]
 
+    let pseudo = 'Sxyrp'
+    let platformInfos = [
+        {"platforme": "Skype", "pseudo": "ipryx", "thumbnail": "skype.png"},
+        {"platforme": "Discord", "pseudo": "pryxs#6784", "thumbnail": "discord.png"},
+        {"platforme": "Steam", "pseudo": "zPryxs", "thumbnail": "steam.png"},
+        {"platforme": "Twitch", "pseudo": "Pryxs", "thumbnail": "twitch.png"},
+        {"platforme": "Epic Games", "pseudo": "", "thumbnail": ""},
+        {"platforme": "Ubisoft", "pseudo": "", "thumbnail": ""}
+    ]
+
+    function editInfos(event){
+        platformInfos = event.detail.tableau;
+    }
+
   
 </script>
 
@@ -54,17 +68,18 @@
 </script>
 
 <div id="Profil">
+
     <div class="MidContainer">
-        <Banner/>
+        <Banner pseudo={pseudo}/>
         {#each posts as post}
             <Post post={post}/>
         {/each}
     </div>
     <div id="RigthBar">
-        <Platform/>
+        <Platform platformInfos={platformInfos}/>
     </div>    
 
-    <ModalProfile/>
+    <ModalProfile on:message={editInfos} pseudo={pseudo} platformInfos={platformInfos}/>
 	<div class="background"></div>
 
 </div>

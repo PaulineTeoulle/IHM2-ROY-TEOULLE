@@ -1,6 +1,7 @@
 <script>
 
 import { toggleModalProfil } from "../views/profil.svelte";
+export let pseudo;
 
 </script>
 
@@ -10,7 +11,7 @@ import { toggleModalProfil } from "../views/profil.svelte";
     <div>
         <div class="profile">
             <img src="images/kiwi.jpg" alt="ImageProfil">
-            <p>Sxyrp</p>
+            <p>{pseudo}</p>
         </div>
 
         <div class="infos">

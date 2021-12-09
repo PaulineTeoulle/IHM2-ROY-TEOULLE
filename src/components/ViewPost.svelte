@@ -19,10 +19,10 @@
     export let post;
 
     let comments = [
-        {"user" : "Trucmuche", "date" : "13 nov. 2021", "message" : "Menfou t'es tellement ininteressant comme bonhomme. #PreyForSxyrp", "likes" : "13"},
-        {"user" : "Machinchose", "date" : "13 nov. 2021", "message" : "Trop le boss, dommage que ca fait 10ans que tout le monde a déjà fini cette quête :,))", "likes" : "21"},
-        {"user" : "François P.", "date" : "13 nov. 2021", "message" : "Il est mignon monsieur Pignon, il est méchant monsieur Brochant !", "likes" : "4"},
-        {"user" : "Pierre", "date" : "13 nov. 2021", "message" : "Celui qui dit qu'il l'a fait, je lui offre... un sandwich. - À quoi le sandwich ? - À la fraise.", "likes" : "4"}
+        {"user" : "Trucmuche", "date" : "13 nov. 2021", "message" : "Menfou t'es tellement ininteressant comme bonhomme. #PreyForSxyrp", "likes" : 13},
+        {"user" : "Machinchose", "date" : "13 nov. 2021", "message" : "Trop le boss, dommage que ca fait 10ans que tout le monde a déjà fini cette quête :,))", "likes" : 21},
+        {"user" : "François P.", "date" : "13 nov. 2021", "message" : "Il est mignon monsieur Pignon, il est méchant monsieur Brochant !", "likes" : 4},
+        {"user" : "Pierre", "date" : "13 nov. 2021", "message" : "Celui qui dit qu'il l'a fait, je lui offre... un sandwich. - À quoi le sandwich ? - À la fraise.", "likes" : 4}
     ]
 
 
