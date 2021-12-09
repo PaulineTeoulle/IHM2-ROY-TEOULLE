@@ -1,44 +1,68 @@
 <script>
-	 let platformInfos = [
-		{"platforme" : "Skype", "pseudo" : "ipryx", "thumbnail": "skype.png"},
-		{"platforme" : "Discord", "pseudo" : "pryxs#6784", "thumbnail": "discord.png"},
-		{"platforme" : "Steam" , "pseudo" :"zPryxs", "thumbnail": "steam.png"},
-		{"platforme" : "Twitch" , "pseudo" : "Pryxs", "thumbnail": "twitch.png"}
-	]
+    let platformInfos = [
+        {"platforme": "Skype", "pseudo": "ipryx", "thumbnail": "skype.png"},
+        {"platforme": "Discord", "pseudo": "pryxs#6784", "thumbnail": "discord.png"},
+        {"platforme": "Steam", "pseudo": "zPryxs", "thumbnail": "steam.png"},
+        {"platforme": "Twitch", "pseudo": "Pryxs", "thumbnail": "twitch.png"}
+    ]
 
 </script>
 
-
-<div class="Platform">
- Autres plateformes
-
- {#each platformInfos as platform}
-
- <div><img src="images/{platform.thumbnail}" alt="profil" />{platform.platforme} : {platform.pseudo}</div>
-    
-{/each}
-
+<div id="Platform">
+    <h3 class="title">Autres plateformes</h3>
+    <div class="list">
+        {#each platformInfos as platform}
+            <div class="platform">
+                <img src="images/{platform.thumbnail}" alt="profil"/>
+                <div class="name">{platform.platforme} : </div>
+                <div class="pseudo">{platform.pseudo}</div>
+            </div>
+        {/each}
+    </div>
 </div>
+
 <style lang="scss">
-	@import '../styles/color.scss';
+  @import '../styles/color.scss';
 
-    .Platform{
+  #Platform {
+    background-color: $tertiary;
+    border-radius: 10px;
+    margin: 0 0 0 30px;
 
-        
-        background-color: $tertiary;
-        width: 100%;
-        margin: 0 24px;
-        color: $dynamic;
-        margin-left: 30px;
-        margin-right: 20px;
-        img{
-            width: 25px;
-            height: auto;
-        }
+    img {
+      width: 25px;
+      height: auto;
+      margin-right: 16px;
     }
 
+    .title {
+      color: $font;
+      padding-top: 20px;
+      font-weight: bold;
+      margin: 0 0 0 24px;
+    }
+
+    .list {
+      color: $font;
+      margin-left: 10px;
+      padding-bottom: 30px;
+    }
+
+    .platform {
+      display: flex;
+      flex-direction: row;
+        margin-top: 16px;
+        margin-left: 16px;
+      .name {
+        color: $font-variation;
+        margin-right: 8px;
+      }
+
+      .pseudo {
+        color: $font;
+      }
+    }
+  }
 
 
-
-	
 </style>

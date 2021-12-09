@@ -25,6 +25,23 @@
         {"user" : "Pierre", "date" : "13 nov. 2021", "message" : "Celui qui dit qu'il l'a fait, je lui offre... un sandwich. - À quoi le sandwich ? - À la fraise.", "likes" : "4"}
     ]
 
+
+
+    
+    function likePost(){
+        let likeSvg =  document.getElementsByClassName("like")[0];
+        if(likeSvg.classList.contains("filled")){
+            likeSvg.setAttribute("src", "images/svg/heart.svg")
+            likeSvg.classList.remove("filled")
+            post.likes -= 1;
+        } else {
+            likeSvg.setAttribute("src", "images/svg/filled-heart.svg")
+            likeSvg.classList.add("filled")
+            post.likes += 1;
+        }
+    }
+
+
     onMount(async () => {
         let maxHeight = 0;
         let listElement = document.getElementsByClassName("hgt");
@@ -53,6 +70,7 @@
                     <p>{post.message}</p>
                 </div>
             </div>
+
 
             <div class="hgt">
                 <p><span>{post.likes}</span> J'aimes</p>

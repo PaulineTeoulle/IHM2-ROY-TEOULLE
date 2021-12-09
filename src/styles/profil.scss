@@ -1,23 +1,22 @@
 @import "./color.scss";
 
+#Profil {
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
 
+  .MidContainer {
+    width: 65%;
+  }
 
-.Profil{
-    width : 65%;
-    margin-top: 35px;
-    display: flex;
+  & > div:first-child {
+    overflow-y: scroll;
+    margin-bottom: 24px;
 
-    &>div:first-child{
-        width: 70%;
-        overflow-y: scroll;
-        margin-bottom: 24px; 
-        
-		&::-webkit-scrollbar {
-			display: none;
-		}
+    &::-webkit-scrollbar {
+      display: none;
     }
-    &>div:nth-child(2){
-        width: 50%;
-    }
+  }
+
 
 }
