@@ -2,8 +2,8 @@
     export let comment;
 
     
-    function likeComment(){
-        let likeSvg =  document.getElementsByClassName("like")[0];
+    function likeComment(event){
+        let likeSvg =  event.target;
         if(likeSvg.classList.contains("filled")){
             likeSvg.setAttribute("src", "images/svg/heart.svg")
             likeSvg.classList.remove("filled")

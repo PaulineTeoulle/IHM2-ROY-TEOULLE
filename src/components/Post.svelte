@@ -19,8 +19,8 @@
     }
 
 
-    function likePost(){
-        let likeSvg =  document.getElementsByClassName("like")[0];
+    function likePost(event){
+        let likeSvg =  event.target;
         if(likeSvg.classList.contains("filled")){
             likeSvg.setAttribute("src", "images/svg/heart.svg")
             likeSvg.classList.remove("filled")
