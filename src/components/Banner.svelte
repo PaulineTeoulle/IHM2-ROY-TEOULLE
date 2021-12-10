@@ -72,7 +72,7 @@ export let pseudo;
     & > div:nth-child(2) {
       padding-top: 88px;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       padding-bottom: 16px;
       margin: 0 16px;
       border-bottom: 1px solid $tertiary;
@@ -105,7 +105,7 @@ export let pseudo;
     .editProfile {
       display: flex;
       flex-direction: row;
-      align-self: end;
+      align-self: flex-end;
       margin: 15px;
 
       .editIcon {

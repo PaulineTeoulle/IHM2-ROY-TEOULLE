@@ -79,8 +79,8 @@
         left: 50%;
         transform: translate(-50%,-50%);
         padding: 24px;
-        width: 30%;
-        min-width: 350px;
+        width: 40%;
+        min-width: 400px;
         border-radius: 10px;
 
 
@@ -108,25 +108,20 @@
         }
 
         &>div:nth-child(2){
-
-         
-
             &>div:nth-child(2){
                 display: flex;
-
-                
                 &>div:first-child{
                     width: 50%;
+                    margin-right: 8px;
                 }
 
                 &>div:nth-child(2){
                     width: 50%;
+                    margin-left: 8px;
                 }
-               
             }
         }
     
-       
         &>div:nth-child(3){
             display: flex;
             button{
@@ -149,6 +144,22 @@
                 margin-left: 10px;
                 border: 2px solid $tertiary;
                 color: $font-variation;
+            }
+        }
+
+        input{
+            padding: 5px;
+            font-family: sans-serif;
+            height: 2.5em;
+            width: -webkit-fill-available;;
+            border: none;
+            background-color: $tertiary;
+            border-radius: 5px;
+            color: $font;
+            margin-bottom: 16px;
+
+            &:focus{
+                outline: none;
             }
         }
     }
