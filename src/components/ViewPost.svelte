@@ -12,8 +12,7 @@
     let text = ''
 
     function addComment(){
-        let newComment = [{"user" : "Pryxs","date" : "09 dec. 2021", "message" : `${text}`, "likes" : 0}]
-		comments = newComment.concat(comments)
+		comments = [{"user" : "Pryxs","date" : "09 dec. 2021", "message" : `${text}`, "likes" : 0}, ...comments]
         text = ''
     }
 

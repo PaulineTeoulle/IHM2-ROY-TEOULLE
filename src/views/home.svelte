@@ -9,8 +9,7 @@
 	]
 
     function addPost(event){
-        let newPost = [{"user" : "Pryxs", "thumbnail": "casimirFace.png", "game" : `${event.detail.gameSelected}`, "message" : `${event.detail.text}`, "image" : "ougah.PNG", "comments" : "0", "likes" : 0, "date" : "10 dec. 2021"}]
-		posts = newPost.concat(posts)
+		posts = [{"user" : "Pryxs", "thumbnail": "casimirFace.png", "game" : `${event.detail.gameSelected}`, "message" : `${event.detail.text}`, "image" : "ougah.PNG", "comments" : "0", "likes" : 0, "date" : "10 dec. 2021"}, ...posts]
 	}
 </script>
 
