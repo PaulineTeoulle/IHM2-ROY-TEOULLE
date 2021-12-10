@@ -14,9 +14,10 @@
     
     .liste {
         color: $font;
-        margin-left: 10px;
+        margin-left: 30px;
         padding-bottom: 30px;
     }
+
     .nbPost {
         color: $font-variation;
     }
@@ -24,8 +25,11 @@
     .jeux {
         margin-top: 24px;
     }
-
-    #nom{
-        font-weight: 500;
+    img{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-right: 10px;
     }
 }

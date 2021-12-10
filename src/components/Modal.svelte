@@ -3,12 +3,14 @@
     import { createEventDispatcher } from 'svelte';
 
     let text = ""
+    let gameSelected =""
 
     const dispatch = createEventDispatcher();
 
     function post(){
         dispatch('message', {
-            text: text
+            text: text,
+            gameSelected: gameSelected
         });
         toggleModal();
     }
@@ -27,10 +29,10 @@
         <div>
             <button>+</button><span>Ajouter un média</span>
         </div>
-        <select>
+        <select bind:value={gameSelected}>
             <option value="" selected disabled>Sélectionner un jeu</option>
-            <option value="">Dofus</option>
-            <option value="">Rocket League</option>
+            <option value="Dofus" >Dofus</option>
+            <option value="Rocket League" >Rocket League</option>
         </select>
     </div>
 

@@ -24,7 +24,7 @@
 
         <div class="jeux">
             <img src="images/thumbnails/NW.jpg" alt="vignette par défaut"/>
-            <div class="nom">New World</div>
+            <div >New World</div>
             <div class="nbPost">17K posts</div>
         </div>
     </div>
@@ -33,13 +33,4 @@
 
 <style lang="scss">
     @import '../styles/favoris.scss';
-
-    img{
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        float: left;
-        margin-right: 10px;
-    }
-    
 </style>

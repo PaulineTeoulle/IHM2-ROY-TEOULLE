@@ -9,7 +9,7 @@
 	]
 
     function addPost(event){
-		posts = [...posts, {"user" : "Pryxs", "thumbnail": "casimirFace.png", "game" : "Dofus", "message" : `${event.detail.text}`, "image" : "ougah.PNG", "comments" : "0", "likes" : "0", "date" : "9 dec. 2021"}]
+		posts = [{"user" : "Pryxs", "thumbnail": "casimirFace.png", "game" : `${event.detail.gameSelected}`, "message" : `${event.detail.text}`, "image" : "ougah.PNG", "comments" : "0", "likes" : 0, "date" : "10 dec. 2021"}, ...posts]
 	}
 </script>
 

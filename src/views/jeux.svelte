@@ -1,5 +1,4 @@
 <script>
-    export let location;
     import Jeu from "../components/Jeu.svelte";
 
     let jeux = [
@@ -14,6 +13,9 @@
         { name: 'Black Ops - Cold War', posts: '88K', thumbnail: 'coldWar.jpg' ,fav: false},
         { name: 'Little Nightmares', posts: '5679', thumbnail: 'LN.jpg',fav: false },
         { name: 'Inside', posts: '9879', thumbnail: 'inside.jpg',fav: false },
+        { name: 'Les Sims 4', posts: '2342', thumbnail: 'sims.jpg',fav: false },
+        { name: 'Animal Crossing', posts: '2342', thumbnail: 'animalCrossing.jpg',fav: false },
+        { name: 'Zelda', posts: '2342', thumbnail: 'zelda.jpg',fav: false },
         { name: 'Anno 1404', posts: '2342', thumbnail: 'anno.jpg',fav: false },
 	];
 

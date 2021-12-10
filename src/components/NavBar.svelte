@@ -4,7 +4,12 @@
 </script>
 
 <nav>
-    <img id="logo" src="images/HerobrineLogo.svg" alt="logo Herobrine"/>
+
+    
+    <Link to="/" class="navBarLink home active">
+        <img id="logo" src="images/HerobrineLogo.svg" alt="logo Herobrine"/>
+    </Link>
+  
 
     <Link to="/" class="navBarLink home active">
         <img src="images/svg/accueil.svg" alt="accueil icon" />
