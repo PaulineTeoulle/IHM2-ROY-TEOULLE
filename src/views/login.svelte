@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    export let location;
+   // export let location;
 
     let users = {username : "toto", password : "mdp"};
     let username, password; 
@@ -59,9 +59,9 @@
                 <img src="images/svg/google.png" alt="google logo"/>
                 Se connecter avec Google
             </button>
-            <label for="username">Nom d'utilisateur</label>
+            <label for="username">Nom d'utilisateur *</label>
             <input id="username" placeholder="Ex : Tartempion27" type="text" bind:value={username}/>
-            <label for="password">Mot de passe</label>
+            <label for="password">Mot de passe *</label>
             <input id="password" type="password" bind:value={password}/>
             <button class="primary-action" on:click={SignIn}>Connexion</button>
         </form>
@@ -69,14 +69,14 @@
 
         <form>
             <h3>Créer votre compte</h3>
-            <label for="username">Nom d'utilisateur</label>
+            <label for="username">Nom d'utilisateur *</label>
             <input id="username" placeholder="Ex : Tartempion27"/>
             <label for="mail">Mail</label>
             <input id="mail" placeholder="Ex : Tartempion@gmail.com"/>
-            <label for="password">Mot de passe</label>
-            <input id="password"/>
-            <label for="password">Confirmation mot de passe</label>
-            <input id="password"/>
+            <label for="password">Mot de passe *</label>
+            <input id="password" type="password"/>
+            <label for="password">Confirmation mot de passe *</label>
+            <input id="password" type="password"/>
             <button class="primary-action" on:click={SignIn}>S'inscrire</button>
         </form>
         <div class="switch-side right-side">

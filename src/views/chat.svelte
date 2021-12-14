@@ -14,7 +14,12 @@
             messages = [...messages, {"user" : 1 ,"message" : message}]
             message = ''
         }
+       
     }
+
+    const onKeyPress = e => {
+    if (e.charCode === 13) sendMessage();
+  };
 
     onMount(async () => {
         let maxHeight = 0;
@@ -58,8 +63,8 @@
         <div class="hgt">
             <img src="images/svg/img.svg" alt="add img"/>
             <img src="images/svg/gif.svg" alt="add gif"/>
-            <input type="text" bind:value={message} placeholder="Aa"/>
-            <button on:click={sendMessage}><img src="images/svg/send.svg" alt="icon envoyer"></button>
+            <input type="text" bind:value={message} placeholder="Aa" on:keypress={onKeyPress}/>
+            <button on:click={sendMessage} ><img src="images/svg/send.svg" alt="icon envoyer"></button>
         </div>
     </div>
 
