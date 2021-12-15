@@ -13,7 +13,7 @@ L'utilisateur peut se connecter, visualiser son fil d'actualité de posts, publi
 * [Scénarii d'utilisation](https://github.com/PaulineTeoulle/IHM2-ROY-TEOULLE/blob/main/Docs/Scenarii%20d'utilisation.pdf)
 * [Modèle utilisateur](https://github.com/PaulineTeoulle/IHM2-ROY-TEOULLE/blob/main/Docs/Mod%C3%A8le%20utilisateur%20cible.pdf)
 * [Modèle de tâches](https://github.com/PaulineTeoulle/IHM2-ROY-TEOULLE/blob/main/Docs/Mod%C3%A8le%20de%20t%C3%A2ches.pdf)
-* [Modèle d'interface abstraite](https://github.com/PaulineTeoulle/Projet_TER/blob/main/Rendus/Plan_de_d%C3%A9veloppement.pdf)
+* [Interface abstraite](https://github.com/PaulineTeoulle/IHM2-ROY-TEOULLE/blob/main/Docs/Interface%20abstraite.pdf)
 * [Interface concrête](https://github.com/PaulineTeoulle/IHM2-ROY-TEOULLE/blob/main/Docs/Interface%20concr%C3%AAte.pdf)
 
 # Installation
