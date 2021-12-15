@@ -18,6 +18,17 @@ L'utilisateur peut se connecter, visualiser son fil d'actualité de posts, publi
 
 # Installation
 
+Prérequis pour installer le projet
+Avant de télécharger le projet, il faut s'assurer d'avoir les éléments suivants d'installés sur votre machine :
+
+node.js. Pour vérifier votre version de node
+```bash
+node -v
+```
+npm. Pour vérifier votre version de npm
+```bash
+npm --version
+```
 Pour installer les packages
 ```bash
 npm install
